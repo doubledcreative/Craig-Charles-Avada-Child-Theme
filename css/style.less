@@ -1,0 +1,274 @@
+/*
+Theme Name: Avada Child Theme - Craig Charles
+Author: Tom Dent
+Author URI: http://www.doubledcreative.com
+*/
+
+/* Less Mixins */
+
+.transition (@transition: all 0.2s ease-in-out) {
+	-webkit-transition:@transition;
+	-moz-transition:@transition;
+	-o-transition:@transition;
+	transition:@transition;
+}
+
+.border-radius (@border-radius: 0px) {
+	-webkit-border-radius:@border-radius;
+	-moz-border-radius:@border-radius;
+	border-radius:@border-radius;
+}
+
+.box-shadow (@box-shadow: rgba(0,0,0,0)) {
+	-webkit-box-shadow:@box-shadow;
+	-moz-box-shadow:@box-shadow;
+	box-shadow:@box-shadow;
+}
+
+.uppercase(){text-transform:uppercase!important;}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Colours */
+
+@white:  		#FFF!important;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* GLOBAL */
+
+body{-webkit-font-smoothing:antialiased!important;overflow:hidden;}
+.divider{height:1px;display:block;border-top:1px solid @white;margin-top:30px;padding-bottom:30px;}
+a:hover{.transition (@transition: all 0.2s ease-in-out);}
+.hover-type-zoomin:hover{
+	.fusion-column-inner-bg-image{opacity:1!important;}
+}
+
+iframe {border:none!important;}
+
+.cc_svg_image {width:100%;height:auto;}
+
+.fusion-title {
+	h2{text-transform:uppercase!important;}
+}
+
+.fusion-button {margin-bottom:10px!important;}
+
+.fusion-logo {display:none;}
+
+#main {background-position:top center!important;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* All Container Padding & Margins */
+
+.ccfs-bio-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; padding: 70px 80px 50px 80px!important; background-color: rgba(0,0,0,0.5);}
+
+.ccfs-disco-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; padding: 70px 80px 20px 80px!important; background-color: rgba(0,0,0,0.5);}
+
+.ccfs-tour-container {margin-left: 0px!important; margin-right: 0px!important;
+	.ccfs-tour-column {
+    	.fusion-column-wrapper {padding: 40px 80px 40px 80px!important;}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* Header Logo - Scaling */
+
+.ccfs-header-logo {max-width: 900px; margin: 190px 0 85px 0; padding: 0 10% 0 10%;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* Page Titles - Top & Bottom Orange Border & Padding */
+
+.ccfs-title {
+	text-transform: uppercase; padding: 0!important; margin-bottom: 40px!important; display: block;
+	h1 {border-top: 4px solid #f39200; border-bottom: 4px solid #f39200; display: inline-block;}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* Discography Page - Various Styling */
+
+.ccfs-disco-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; padding: 70px 80px 20px 80px!important; background-color: rgba(0,0,0,0.5);}
+
+.ccfs-disco-image {margin-bottom: 20px!important;}
+
+.ccfs-disco-button {
+	font-size: 15px; padding: 5px 20px 5px 0px!important;
+	.button-icon-left {color: #f39200!important;}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* Footer Styling - Background Tile */
+
+.fusion-footer-widget-area {background-repeat: repeat!important;}
+.fusion-column {border-right:0 solid #313131; padding: 0px 80px 0px 80px;}
+#footer {display:none;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* BANDS IN TOWN 
+
+.bit-widget-container{.font2();color:@white;visibility:visible;
+	b, strong{font-weight:normal!important;}
+	.bit-track-artist-header{border-top:1px solid @white-fade!important;border-bottom:none!important;cursor:pointer!important;
+		.bit-invert{display:none!important;}
+		.bit-notify{font-size:14px;line-height:40px;}
+		&:hover{color:@white;.transition()!important;}
+	}
+	.bit-header{
+		th{.font2();padding: 15px 10px 10px;}
+		.bit-header-overflow-fix{overflow:visible;
+			.bit-share-links{margin-top:-2px
+				&:hover{color:@white;.transition()!important;}
+			}
+		}
+	}
+	.bit-description-links, .bit-artist-event-link{display:none;pointer-events:none!important;}
+	table{border-bottom:none!important;}
+	tr{border-top:1px solid @white-fade;}
+	.bit-events td{border-top:none!important;}
+	.bit-date, .bit-venue, .bit-location, .bit-tickets, .bit-rsvp{padding:10px 1%!important;}
+	.bit-date{width:10%!important;.font2();
+		a{pointer-events:none!important;color:@white;}
+	}
+	.bit-venue{width:30%!important;.font2();
+		a{pointer-events:none!important;color:@white;}
+		.lineup{color:@lilac;}
+	}
+	.bit-location{width:40%!important;.font2();
+		a{pointer-events:none!important;color:@lilac;}
+	}
+	.bit-tickets{width:10%!important;.font2();
+		a{background:@pink;color:@white;padding:5px 10px;cursor:pointer!important;width:100%!important;text-align:center!important;color:@white;
+			&:hover{background:@white;color:@black;.transition()!important;}
+		}
+	}
+	.bit-rsvp{width:10%!important;
+		.bit-uiButton{background:none!important;border:none!important;padding:0!important;display:block!important;height:auto!important;
+			a{.font2();background:@white!important;color:@purple;padding:5px 10px!important;cursor: hand!important;float:none!important;width:100%!important;text-align:center!important;
+			&:hover{background:@white;color:@black;.transition()!important;}
+		}
+		}
+	}
+}*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* GRAVITY FORMS */
+
+.gform_wrapper{margin:0 auto!important;
+	.gform_body{
+		.gform_fields{
+			.gfield{
+				.ginput_container{
+					input{padding:15px 20px!important;height:auto!important;margin:0!important;border:0!important;font-family:"Karla"!important;
+						&:focus{outline:none;background:#FFFDE4!important;.transition();box-shadow:none;}
+					}
+				}
+			}
+		}
+	}
+	.gform_footer{width:100%;display:block;margin:0!important;padding:0!important;font-family:"Roboto Slab";
+		input[type=submit]{padding:15px 40px!important;display:block!important;margin:0 auto!important;background:#ff9800;font-family:"Karla"!important;font-weight:700;font-size:18px;
+			&:hover{.transition();}
+		}
+	}
+}
+
+::-webkit-input-placeholder{color:#222;}
+:-moz-placeholder{color:#222;}
+::-moz-placeholder{color:#222;}
+:-ms-input-placeholder{color:#222;}
+.placeholder{color:#222;}
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 800PX ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 800px) {
+	
+	
+	/* All Container Padding & Margins */
+
+	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; padding: 30px 40px 10px 40px!important;}
+
+	.ccfs-disco-container {margin-left: -40px!important; margin-right: -40px!important; padding: 40px 40px 10px 40px!important;}
+
+	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important;
+		.ccfs-tour-column {
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
+		}
+	}
+	
+	.ccfs-booking-container {margin-left: -80px!important; margin-right: -80px!important;
+		.ccfs-booking-column {
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
+		}
+	}
+	
+	
+	/* Header Logo - Scaling */
+
+	.ccfs-header-logo {margin: 80px 0 80px 0; padding: 0 10% 0 10%;}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 500PX ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 500px) {
+ 
+	
+	/* All Container Padding & Margins */
+	
+	.ccfs-bio-container {margin-left: -60px!important; margin-right: -60px!important; padding: 30px 30px 10px 30px!important;}
+	
+	.ccfs-disco-container {margin-left: -60px!important; margin-right: -60px!important; padding: 20px 20px 0px 20px!important;}
+	
+	.ccfs-tour-container {margin-left: -100px!important; margin-right: -100px!important;
+		.ccfs-tour-column {
+			.fusion-column-wrapper {padding: 20px 20px 20px 20px!important;}
+		}
+	}
+	
+	.ccfs-booking-container {margin-left: -100px!important; margin-right: -100px!important;
+		.ccfs-booking-column {
+			.fusion-column-wrapper {padding: 20px 20px 20px 20px!important;}
+		}
+	}
+	
+}
