@@ -27,19 +27,23 @@ Author URI: http://www.doubledcreative.com
 
 .uppercase(){text-transform:uppercase!important;}
 
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /* Colours */
 
 @white:  		#FFF!important;
+@black:  		#000!important;
+@orange:		#f39200!important;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 /* GLOBAL */
 
-body{-webkit-font-smoothing:antialiased!important;overflow:hidden;}
+body{-webkit-font-smoothing:antialiased!important;overflow:scroll!important;}
 .divider{height:1px;display:block;border-top:1px solid @white;margin-top:30px;padding-bottom:30px;}
 a:hover{.transition (@transition: all 0.2s ease-in-out);}
 .hover-type-zoomin:hover{
@@ -58,21 +62,13 @@ iframe {border:none!important;}
 
 .fusion-logo {display:none;}
 
-#main {background-position:top center!important;}
+#main{background-position:top center!important; margin-top: 0px!important}
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/* All Container Padding & Margins */
-
-.ccfs-bio-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; padding: 70px 80px 50px 80px!important; background-color: rgba(0,0,0,0.5);}
-
-.ccfs-disco-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; padding: 70px 80px 20px 80px!important; background-color: rgba(0,0,0,0.5);}
-
-.ccfs-tour-container {margin-left: 0px!important; margin-right: 0px!important;
-	.ccfs-tour-column {
-    	.fusion-column-wrapper {padding: 40px 80px 40px 80px!important;}
+.post-content{
+	p{margin-bottom:28px;
+		a{
+			&:hover{border-bottom:1px dotted @orange;}
+		}
 	}
 }
 
@@ -80,9 +76,65 @@ iframe {border:none!important;}
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+/* HEADER & NAV */
+
+.fusion-main-menu{
+	ul{padding:18px 0 20px 0!important;
+		li{padding-left:20px!important;padding-right:20px!important;
+			a{height:25px!important;line-height:25px!important;display:inline!important;.uppercase();border-top:3px solid rgba(243, 146, 0, 0);border-bottom:3px solid rgba(243, 146, 0, 0);
+				&:hover{color:@white!important;border-top:3px solid @orange;border-bottom:3px solid @orange;}
+			}
+		}
+		.cc-nav-icon{padding-right:0!important;}
+	}
+}
+
+
+.fusion-main-menu .current_page_item > a {color:@white!important;border-top:3px solid @orange;border-bottom:3px solid @orange;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* All Container & Column Padding & Margins */
+
+.ccfs-home-tour-container{padding: 40px 80px 80px 80px!important;
+	.ccfs-home-tour-column {
+		.fusion-column-wrapper {padding: 40px 80px 40px 80px!important; background-color: rgba(0,0,0,0.8)!important;}
+	}
+}	
+
+.ccfs-home-about-container{background-image: url(http://craigcharles.net/wp-content/uploads/background-about.jpg); background-position: right center!important; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;  background-size: cover;
+	.ccfs-home-about-column {
+		.fusion-column-wrapper {padding: 12% 12% 12% 12%!important; background-color: rgba(0,0,0,0.8)!important;}
+	}
+}
+
+.ccfs-bio-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; margin-bottom: 80px!important; padding: 70px 80px 50px 80px!important; background-color: rgba(0,0,0,0.8);}
+
+.ccfs-disco-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; margin-bottom: 80px!important; padding: 70px 80px 20px 80px!important; background-color: rgba(0,0,0,0.8);}
+
+.ccfs-tour-container {margin-left: 0px!important; margin-right: 0px!important; margin-bottom: 80px!important;
+	.ccfs-tour-column {
+    	.fusion-column-wrapper {padding: 40px 80px 40px 80px!important;}
+	}
+}
+
+.ccfs-booking-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 80px!important; background-color: rgba(0,0,0,0)!important;
+		.ccfs-booking-column {
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important; background-color: rgba(0,0,0,0.8)!important;}
+		}
+	}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 /* Header Logo - Scaling */
 
-.ccfs-header-logo {max-width: 900px; margin: 190px 0 85px 0; padding: 0 10% 0 10%;}
+.ccfs-header-logo{max-width:900px;margin:140px 0 0 0;padding:0 10% 0 10%;overflow:visible;
+	img{filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));-webkit-filter:drop-shadow(0 0 10px rgba(0,0,0,0.7));}
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -90,9 +142,8 @@ iframe {border:none!important;}
 
 /* Page Titles - Top & Bottom Orange Border & Padding */
 
-.ccfs-title {
-	text-transform: uppercase; padding: 0!important; margin-bottom: 40px!important; display: block;
-	h1 {border-top: 4px solid #f39200; border-bottom: 4px solid #f39200; display: inline-block;}
+.ccfs-title {text-transform: uppercase; padding: 0!important; margin-bottom: 40px!important; display: block;
+	h1 {border-top: 4px solid #f39200; border-bottom: 4px solid #f39200; display: inline-block; text-shadow: 0 0 10px rgba(0, 0, 0, 0.4); color:white!important;}
 }
 
 
@@ -101,13 +152,11 @@ iframe {border:none!important;}
 
 /* Discography Page - Various Styling */
 
-.ccfs-disco-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; padding: 70px 80px 20px 80px!important; background-color: rgba(0,0,0,0.5);}
+.ccfs-disco-image {border:1px solid rgba(255,255,255,0.2); margin-bottom: 0px!important;}
 
-.ccfs-disco-image {margin-bottom: 20px!important;}
-
-.ccfs-disco-button {
-	font-size: 15px; padding: 5px 20px 5px 0px!important;
-	.button-icon-left {color: #f39200!important;}
+.ccfs-disco-button{font-size:16px;padding:16px 0;display:block;border-bottom:1px solid rgba(255,255,255,0.2)!important;margin:0!important;
+	&:hover{color:@orange;}
+	.button-icon-left{color:@white;}
 }
 
 
@@ -116,61 +165,106 @@ iframe {border:none!important;}
 
 /* Footer Styling - Background Tile */
 
-.fusion-footer-widget-area {background-repeat: repeat!important;}
-.fusion-column {border-right:0 solid #313131; padding: 0px 80px 0px 80px;}
-#footer {display:none;}
+.fusion-footer-widget-area{background-repeat:repeat!important;
+	.fusion-column{padding:0 4%;}
+	.widget-title{border-top: 3px solid @orange; border-bottom: 3px solid @orange; color: @white; display: inline-block; line-height: 24px!important;}
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/* BANDS IN TOWN 
 
-.bit-widget-container{.font2();color:@white;visibility:visible;
-	b, strong{font-weight:normal!important;}
-	.bit-track-artist-header{border-top:1px solid @white-fade!important;border-bottom:none!important;cursor:pointer!important;
+/* BANDS IN TOWN (TomB)
+
+
+.bit-widget-container{font-family: karla!important; font-size: 18px; box-sizing: content-box;
+	
+	.bit-header{background: rgba(255, 255, 255, 0)!important;}
+	
+	*{box-sizing: content-box!important;}
+	
+	th{padding-top: 16px!important; padding-bottom: 16px!important; border-top: 1px solid orange!important; border-bottom: 1px solid orange!important;}
+	
+	tr{font-size: 18px!important;}
+	
+	td {font-size: 18px!important; border-color: orange!important; padding-top: 10px!important; padding-bottom: 10px!important;}
+	
+	td.bit-date{width: auto!important;}
+	
+	.bbit-shortcode-dark-transparent{background-color: rgba(255, 255, 255, 0)!important; border-top-color: #fff !important; border-bottom-color: #fff !important;}
+	
+	a.bit-events-nav{color: orange!important;}
+
+	a.bit-buy-tix{text-transform: uppercase!important; font-size: 13px!important; color: white!important; background: orange; padding: 7px 15px 5px 15px!important; line-height: 18px!important; border-radius: 2px;}
+
+	a.bit-rsvp{text-transform: uppercase!important; font-size: 13px!important; color: white!important; background: #aaa9a9; padding: 7px 15px 5px 15px!important; line-height: 18px!important; border-radius: 2px;}
+
+	#bit-events td .bit-uiButton{background: rgba(255, 255, 255, 0)!important; border: 0px !important; box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; font-size: 11px; vertical-align: top; white-space: nowrap; display: block!important; padding: 0 0!important;} 
+	
+} */
+
+
+
+
+
+
+/* BANDS IN TOWN */
+
+.bit-widget-container{font-family:"Karla", Arial, Helvetica, sans-serif;;font-size:16px!important;text-transform: uppercase!important;
+	b, strong{font-weight:700!important;}
+	.bit-track-artist-header{border-top:1px solid rgba(255,255,255,0.1)!important;border-bottom:none!important;cursor:pointer!important;
 		.bit-invert{display:none!important;}
-		.bit-notify{font-size:14px;line-height:40px;}
+		.bit-notify{letter-spacing:0px;font-size:16px;line-height:20px;font-weight:700!important;text-transform:uppercase!important;padding-top:10px!important;padding-bottom:10px!important;}
 		&:hover{color:@white;.transition()!important;}
 	}
-	.bit-header{
-		th{.font2();padding: 15px 10px 10px;}
+	.bit-header{border-top:none;
+		th{font-family: karla;padding: 10px 10px 10px;letter-spacing:0px;font-weight:700!important;}
 		.bit-header-overflow-fix{overflow:visible;
+			.bit-header-links{display: none;}
 			.bit-share-links{margin-top:-2px
 				&:hover{color:@white;.transition()!important;}
 			}
 		}
 	}
-	.bit-description-links, .bit-artist-event-link{display:none;pointer-events:none!important;}
+	a.bit-events-nav{font-weight:700!important;}
+	.bit-description-links, .bit-artist-event-link{display:none;pointer-events:none!important;font-size:16px!important;}
 	table{border-bottom:none!important;}
-	tr{border-top:1px solid @white-fade;}
+	tr{border-top:1px solid rgba(255,255,255,0.1);}
 	.bit-events td{border-top:none!important;}
-	.bit-date, .bit-venue, .bit-location, .bit-tickets, .bit-rsvp{padding:10px 1%!important;}
-	.bit-date{width:10%!important;.font2();
-		a{pointer-events:none!important;color:@white;}
+	.bit-date, .bit-venue, .bit-location, .bit-tickets, .bit-rsvp{padding:10px 1%!important;font-size: 16px!important;}
+	.bit-date{width:10%!important;font-family:karla;font-weight:700!important;
+		a{font-weight:100!important;pointer-events:none!important;font-size: 16px!important;}
 	}
-	.bit-venue{width:30%!important;.font2();
-		a{pointer-events:none!important;color:@white;}
-		.lineup{color:@lilac;}
+	.bit-venue{width:30%!important;font-family:karla;font-weight:700!important;
+		a{font-weight:100!important;pointer-events:none!important;font-size: 16px!important;}
 	}
-	.bit-location{width:40%!important;.font2();
-		a{pointer-events:none!important;color:@lilac;}
+	.bit-location{width:40%!important;font-family:karla;font-weight:700!important;
+		a{font-weight:100!important;pointer-events:none!important;font-size: 16px!important;}
 	}
-	.bit-tickets{width:10%!important;.font2();
-		a{background:@pink;color:@white;padding:5px 10px;cursor:pointer!important;width:100%!important;text-align:center!important;color:@white;
-			&:hover{background:@white;color:@black;.transition()!important;}
+	.bit-tickets{width:10%!important;font-weight:700!important;
+		a{border-radius: 2px;background:@orange;color:@white;padding:5px 10px;cursor:pointer!important;width:100%!important;text-align:center!important;font-family:karla!important;font-size: 14px!important;line-height:22px!important;font-weight:700!important;text-transform:uppercase!important;
+			&:hover{background:@white;color:@orange;.transition()!important;}
 		}
 	}
 	.bit-rsvp{width:10%!important;
-		.bit-uiButton{background:none!important;border:none!important;padding:0!important;display:block!important;height:auto!important;
-			a{.font2();background:@white!important;color:@purple;padding:5px 10px!important;cursor: hand!important;float:none!important;width:100%!important;text-align:center!important;
-			&:hover{background:@white;color:@black;.transition()!important;}
+		.bit-uiButton{background:none!important;border:none!important;padding:0!important;margin-top: -2px;
+			a{font-family:karla!important;font-size: 14px!important;line-height:22px!important;font-weight:700!important; background: #333333!important;color:@white;padding:5px 15px!important;cursor: hand!important;float:none!important;width:100%!important;text-align:center!important;border-radius: 2px;
+			&:hover{background:@white;color:@orange;.transition()!important;}
 		}
 		}
 	}
-}*/
+}
+
+/* Remove Border Colour on BIT divider */
+
+tr{
+	td{border-color:rgba(0,0,0,0)!important;}
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /* GRAVITY FORMS */
 
@@ -179,7 +273,7 @@ iframe {border:none!important;}
 		.gform_fields{
 			.gfield{
 				.ginput_container{
-					input{padding:15px 20px!important;height:auto!important;margin:0!important;border:0!important;font-family:"Karla"!important;
+					input{padding:15px 20px!important;height:auto!important;margin:0!important;border:0!important;font-family:"Karla"!important;.border-radius (@border-radius: 2px);
 						&:focus{outline:none;background:#FFFDE4!important;.transition();box-shadow:none;}
 					}
 				}
@@ -193,12 +287,71 @@ iframe {border:none!important;}
 	}
 }
 
-::-webkit-input-placeholder{color:#222;}
-:-moz-placeholder{color:#222;}
-::-moz-placeholder{color:#222;}
-:-ms-input-placeholder{color:#222;}
-.placeholder{color:#222;}
+/* Placeholder Font Colour */
 
+::-webkit-input-placeholder{color:@black;}
+:-moz-placeholder{color:@black;}
+::-moz-placeholder{color:@black;}
+:-ms-input-placeholder{color:@black;}
+.placeholder{color:@black;}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 1000PX ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 1000px) {
+	
+	
+	/* GLOBAL */
+	
+	#main {margin-top: -13px!important}
+	
+	
+	/* Header Logo - Scaling */
+
+	.ccfs-header-logo {margin: 103px 0 40px 0; padding: 0 25% 0 25%;}
+	
+	
+	/* Main Navigation - Top Bottom Border Styling */
+
+	.fusion-main-menu ul {padding: 0 0 0 0!important;}
+	
+	.fusion-mobile-menu-icons a {font-size: 24px; margin-top: 0px; margin-right: -10px;}
+	
+	
+	/* Mobile Navigation - 0 Opacity Background - Negative Bottom Margin */
+	
+	.fusion-header {background-color: rgba(255, 255, 255, 0)!important; margin-bottom: -61px!important;}
+	
+	
+	/* All Container Padding & Margins */
+	
+	.ccfs-home-tour-container{padding: 80px 40px 80px 40px!important;
+		.ccfs-home-tour-column {
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;background-color: rgba(0,0,0,0.8)!important;}
+		}
+	}	
+
+	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 70px 80px 50px 80px!important;}
+	
+	.ccfs-disco-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 40px 40px 0px 40px!important;}
+	
+	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important; margin-bottom: 0px!important;
+		.ccfs-tour-column {
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
+		}
+	}
+	
+	.ccfs-booking-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 40px 40px 10px 40px!important; background-color: rgba(0,0,0,0.8)!important;
+		.ccfs-booking-column {
+			.fusion-column-wrapper {padding: 0 0 0 0!important; background-color: rgba(0,0,0,0)!important;}
+		}
+	}
+	
+
+}
 
 
 
@@ -212,34 +365,45 @@ iframe {border:none!important;}
 @media only screen and (max-width: 800px) {
 	
 	
-	/* All Container Padding & Margins */
+	/* Page Titles - Top & Bottom Orange Border & Padding */
 
-	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; padding: 30px 40px 10px 40px!important;}
-
-	.ccfs-disco-container {margin-left: -40px!important; margin-right: -40px!important; padding: 40px 40px 10px 40px!important;}
-
-	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important;
-		.ccfs-tour-column {
-			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
-		}
+	.ccfs-title {
+		h1 {font-size: 28px; line-height: 32px;}
 	}
 	
-	.ccfs-booking-container {margin-left: -80px!important; margin-right: -80px!important;
-		.ccfs-booking-column {
-			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
+	h2 {font-size: 26px!important; line-height: 30px!important;}
+	p {font-size: 16px!important; line-height: 22px!important;}
+	
+	
+	/* All Container Padding & Margins */
+	
+	.ccfs-home-tour-container{padding: 80px 80px 80px 80px!important;
+		.ccfs-home-tour-column {
+			.fusion-column-wrapper {padding: 0 0 0 0 !important;background-color: rgba(0,0,0,0)!important;}
 		}
+	}	
+	
+	
+	/* BANDS IN TOWN */
+	
+	.bit-widget-container{
+		.bit-date{width:100%!important;display:block;margin-top:10px;}
+		.bit-venue{width:100%!important;display:block;}
+		.bit-location{width:100%!important;margin-bottom:10px;}
+		.bit-rsvp{}
+		.bit-date, .bit-venue, .bit-location{padding:0!important;display:block;}
 	}
+	
+	.bit-events td{height:auto!important;}
 	
 	
 	/* Header Logo - Scaling */
 
-	.ccfs-header-logo {margin: 80px 0 80px 0; padding: 0 10% 0 10%;}
-
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////
+	.ccfs-header-logo {margin: 70px 0 40px 0; padding: 0 20% 0 20%;}
 	
 	
 }
+
 
 
 
@@ -251,24 +415,44 @@ iframe {border:none!important;}
 
 
 @media only screen and (max-width: 500px) {
- 
+	
 	
 	/* All Container Padding & Margins */
 	
-	.ccfs-bio-container {margin-left: -60px!important; margin-right: -60px!important; padding: 30px 30px 10px 30px!important;}
+	.ccfs-home-tour-container{padding: 40px 40px 0px 40px!important;
+		.ccfs-home-tour-column {
+			.fusion-column-wrapper {padding: 0 0 0 0 !important;background-color: rgba(0,0,0,0)!important;}
+		}
+	}	
 	
-	.ccfs-disco-container {margin-left: -60px!important; margin-right: -60px!important; padding: 20px 20px 0px 20px!important;}
 	
-	.ccfs-tour-container {margin-left: -100px!important; margin-right: -100px!important;
+	.ccfs-home-about-container{
+		.ccfs-home-about-column {
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important; background-color: rgba(0,0,0,1)!important;}
+		}
+	}
+	
+	
+	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 30px 40px 10px 40px!important;}
+	
+	
+	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important;
 		.ccfs-tour-column {
-			.fusion-column-wrapper {padding: 20px 20px 20px 20px!important;}
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
 		}
 	}
 	
-	.ccfs-booking-container {margin-left: -100px!important; margin-right: -100px!important;
+	
+	.ccfs-booking-container {
 		.ccfs-booking-column {
-			.fusion-column-wrapper {padding: 20px 20px 20px 20px!important;}
+			.fusion-column-wrapper {padding: 0 0 0 0!important;}
 		}
 	}
 	
+	
+	/* Header Logo - Scaling */
+
+	.ccfs-header-logo {margin: 125px 0 60px 0; padding: 0 12% 0 12%;}
+		 
+			
 }
