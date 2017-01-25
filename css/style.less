@@ -28,7 +28,6 @@ Author URI: http://www.doubledcreative.com
 .uppercase(){text-transform:uppercase!important;}
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -41,31 +40,32 @@ Author URI: http://www.doubledcreative.com
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
 /* GLOBAL */
 
-body{-webkit-font-smoothing:antialiased!important;overflow:scroll!important;}
+body{-webkit-font-smoothing:antialiased!important;overflow-y:scroll!important;}
 .divider{height:1px;display:block;border-top:1px solid @white;margin-top:30px;padding-bottom:30px;}
 a:hover{.transition (@transition: all 0.2s ease-in-out);}
 .hover-type-zoomin:hover{
 	.fusion-column-inner-bg-image{opacity:1!important;}
 }
 
-iframe {border:none!important;}
+iframe{border:none!important;}
 
-.cc_svg_image {width:100%;height:auto;}
+.cc_svg_image{width:100%;height:auto;}
 
-.fusion-title {
+.fusion-title{
 	h2{text-transform:uppercase!important;}
 }
 
-.fusion-button {margin-bottom:10px!important;}
+.fusion-button{margin-bottom:10px!important;margin-top:10px!important;font-size:16px!important;line-height:18px!important;}
 
-.fusion-logo {display:none;}
+.fusion-logo{display:none;}
 
-#main{background-position:top center!important; margin-top: 0px!important}
+#main{/*background-position:top center!important;*/margin-top:0px!important}
 
 .post-content{
-	p{margin-bottom:28px;
+	p{margin-bottom:30px;
 		a{
 			&:hover{border-bottom:1px dotted @orange;}
 		}
@@ -91,46 +91,23 @@ iframe {border:none!important;}
 
 
 .fusion-main-menu .current_page_item > a {color:@white!important;border-top:3px solid @orange;border-bottom:3px solid @orange;}
+.fusion-mobile-nav-item a{text-transform:uppercase;font-weight:700;}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/* All Container & Column Padding & Margins */
+/* Revolution Slider Background Overlay */
 
-.ccfs-home-tour-container{padding: 40px 80px 80px 80px!important;
-	.ccfs-home-tour-column {
-		.fusion-column-wrapper {padding: 40px 80px 40px 80px!important; background-color: rgba(0,0,0,0.8)!important;}
-	}
-}	
-
-.ccfs-home-about-container{background-image: url(http://craigcharles.net/wp-content/uploads/background-about.jpg); background-position: right center!important; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;  background-size: cover;
-	.ccfs-home-about-column {
-		.fusion-column-wrapper {padding: 12% 12% 12% 12%!important; background-color: rgba(0,0,0,0.8)!important;}
-	}
-}
-
-.ccfs-bio-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; margin-bottom: 80px!important; padding: 70px 80px 50px 80px!important; background-color: rgba(0,0,0,0.8);}
-
-.ccfs-disco-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; margin-bottom: 80px!important; padding: 70px 80px 20px 80px!important; background-color: rgba(0,0,0,0.8);}
-
-.ccfs-tour-container {margin-left: 0px!important; margin-right: 0px!important; margin-bottom: 80px!important;
-	.ccfs-tour-column {
-    	.fusion-column-wrapper {padding: 40px 80px 40px 80px!important;}
-	}
-}
-
-.ccfs-booking-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 80px!important; background-color: rgba(0,0,0,0)!important;
-		.ccfs-booking-column {
-			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important; background-color: rgba(0,0,0,0.8)!important;}
-		}
-	}
+.tp-dottedoverlay.twoxtwo {background: url(none); background-color: rgba(0, 0, 0, 0.4) !important;}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 /* Header Logo - Scaling */
+
+.ccfs-slider-logo {img{filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));-webkit-filter:drop-shadow(0 0 10px rgba(0,0,0,0.7));}}
 
 .ccfs-header-logo{max-width:900px;margin:140px 0 0 0;padding:0 10% 0 10%;overflow:visible;
 	img{filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));-webkit-filter:drop-shadow(0 0 10px rgba(0,0,0,0.7));}
@@ -143,8 +120,43 @@ iframe {border:none!important;}
 /* Page Titles - Top & Bottom Orange Border & Padding */
 
 .ccfs-title {text-transform: uppercase; padding: 0!important; margin-bottom: 40px!important; display: block;
-	h1 {border-top: 4px solid #f39200; border-bottom: 4px solid #f39200; display: inline-block; text-shadow: 0 0 10px rgba(0, 0, 0, 0.4); color:white!important;}
+	h1 {border-top:3px solid @orange; border-bottom: 3px solid @orange; display: inline-block; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); color:@white!important;}
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* All Container & Column Padding & Margins */
+
+.ccfs-tour-container{padding-bottom:80px!important;
+	.ccfs-home-tour-column{
+		.fusion-column-wrapper{padding:40px 80px 40px 80px!important;background-color:rgba(0,0,0,0.8)!important;}
+	}
+}
+
+.ccfs-home-about-container{
+	.ccfs-home-about-column{
+		.fusion-column-wrapper{padding: 12% 12% 12% 12%!important;background-color:rgba(0,0,0,0.8)!important;}
+	}
+	.fusion-title{
+		h2{color:@orange!important;}
+	}
+}
+
+.ccfs-bio-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; margin-bottom: 80px!important; padding: 70px 80px 70px 80px!important; background-color: rgba(0,0,0,0.8);
+	h2 {color: @orange!important; font-size:28px !important; line-height:36px !important; font-weight: 700!important; margin-bottom: 30px!important; text-transform: none!important;}
+}
+
+.ccfs-disco-container {max-width: 1200px!important; margin-left: auto!important; margin-right: auto!important; margin-bottom: 80px!important; padding: 70px 80px 20px 80px!important; background-color: rgba(0,0,0,0.8);
+	.ccfs-disco-column{margin-bottom: 30px!important}
+}
+
+.ccfs-booking-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 80px!important; background-color: rgba(0,0,0,0)!important;
+		.ccfs-booking-column {
+			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important; background-color: rgba(0,0,0,0.8)!important;}
+		}
+	}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -163,50 +175,12 @@ iframe {border:none!important;}
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/* Footer Styling - Background Tile */
+/* Biography Page - Column CSS */
 
-.fusion-footer-widget-area{background-repeat:repeat!important;
-	.fusion-column{padding:0 4%;}
-	.widget-title{border-top: 3px solid @orange; border-bottom: 3px solid @orange; color: @white; display: inline-block; line-height: 24px!important;}
-}
+.ccfs-columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px;}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-/* BANDS IN TOWN (TomB)
-
-
-.bit-widget-container{font-family: karla!important; font-size: 18px; box-sizing: content-box;
-	
-	.bit-header{background: rgba(255, 255, 255, 0)!important;}
-	
-	*{box-sizing: content-box!important;}
-	
-	th{padding-top: 16px!important; padding-bottom: 16px!important; border-top: 1px solid orange!important; border-bottom: 1px solid orange!important;}
-	
-	tr{font-size: 18px!important;}
-	
-	td {font-size: 18px!important; border-color: orange!important; padding-top: 10px!important; padding-bottom: 10px!important;}
-	
-	td.bit-date{width: auto!important;}
-	
-	.bbit-shortcode-dark-transparent{background-color: rgba(255, 255, 255, 0)!important; border-top-color: #fff !important; border-bottom-color: #fff !important;}
-	
-	a.bit-events-nav{color: orange!important;}
-
-	a.bit-buy-tix{text-transform: uppercase!important; font-size: 13px!important; color: white!important; background: orange; padding: 7px 15px 5px 15px!important; line-height: 18px!important; border-radius: 2px;}
-
-	a.bit-rsvp{text-transform: uppercase!important; font-size: 13px!important; color: white!important; background: #aaa9a9; padding: 7px 15px 5px 15px!important; line-height: 18px!important; border-radius: 2px;}
-
-	#bit-events td .bit-uiButton{background: rgba(255, 255, 255, 0)!important; border: 0px !important; box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; font-size: 11px; vertical-align: top; white-space: nowrap; display: block!important; padding: 0 0!important;} 
-	
-} */
-
-
-
-
 
 
 /* BANDS IN TOWN */
@@ -218,6 +192,7 @@ iframe {border:none!important;}
 		.bit-notify{letter-spacing:0px;font-size:16px;line-height:20px;font-weight:700!important;text-transform:uppercase!important;padding-top:10px!important;padding-bottom:10px!important;}
 		&:hover{color:@white;.transition()!important;}
 	}
+	
 	.bit-header{border-top:none;
 		th{font-family: karla;padding: 10px 10px 10px;letter-spacing:0px;font-weight:700!important;}
 		.bit-header-overflow-fix{overflow:visible;
@@ -227,34 +202,46 @@ iframe {border:none!important;}
 			}
 		}
 	}
+	
 	a.bit-events-nav{font-weight:700!important;}
+	
 	.bit-description-links, .bit-artist-event-link{display:none;pointer-events:none!important;font-size:16px!important;}
+	
 	table{border-bottom:none!important;}
+	
 	tr{border-top:1px solid rgba(255,255,255,0.1);}
+	
 	.bit-events td{border-top:none!important;}
+	
 	.bit-date, .bit-venue, .bit-location, .bit-tickets, .bit-rsvp{padding:10px 1%!important;font-size: 16px!important;}
+	
 	.bit-date{width:10%!important;font-family:karla;font-weight:700!important;
 		a{font-weight:100!important;pointer-events:none!important;font-size: 16px!important;}
 	}
+	
 	.bit-venue{width:30%!important;font-family:karla;font-weight:700!important;
 		a{font-weight:100!important;pointer-events:none!important;font-size: 16px!important;}
 	}
+	
 	.bit-location{width:40%!important;font-family:karla;font-weight:700!important;
 		a{font-weight:100!important;pointer-events:none!important;font-size: 16px!important;}
 	}
+	
 	.bit-tickets{width:10%!important;font-weight:700!important;
 		a{border-radius: 2px;background:@orange;color:@white;padding:5px 10px;cursor:pointer!important;width:100%!important;text-align:center!important;font-family:karla!important;font-size: 14px!important;line-height:22px!important;font-weight:700!important;text-transform:uppercase!important;
 			&:hover{background:@white;color:@orange;.transition()!important;}
 		}
 	}
+	
 	.bit-rsvp{width:10%!important;
 		.bit-uiButton{background:none!important;border:none!important;padding:0!important;margin-top: -2px;
 			a{font-family:karla!important;font-size: 14px!important;line-height:22px!important;font-weight:700!important; background: #333333!important;color:@white;padding:5px 15px!important;cursor: hand!important;float:none!important;width:100%!important;text-align:center!important;border-radius: 2px;
-			&:hover{background:@white;color:@orange;.transition()!important;}
-		}
+				&:hover{background:@white;color:@orange;.transition()!important;}
+			}
 		}
 	}
 }
+
 
 /* Remove Border Colour on BIT divider */
 
@@ -287,6 +274,7 @@ tr{
 	}
 }
 
+
 /* Placeholder Font Colour */
 
 ::-webkit-input-placeholder{color:@black;}
@@ -296,22 +284,23 @@ tr{
 .placeholder{color:@black;}
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* Footer */
+
+.fusion-footer-widget-area{
+	.fusion-column{padding:0 4%;}
+	.widget-title{border-top: 3px solid @orange; border-bottom: 3px solid @orange; color: @white; display: inline-block; line-height: 24px!important;}
+}
+
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
-/* MEDIA QUERIES 1000PX ////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 1000PX ///////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
 @media only screen and (max-width: 1000px) {
-	
-	
-	/* GLOBAL */
-	
-	#main {margin-top: -13px!important}
-	
-	
-	/* Header Logo - Scaling */
-
-	.ccfs-header-logo {margin: 103px 0 40px 0; padding: 0 25% 0 25%;}
 	
 	
 	/* Main Navigation - Top Bottom Border Styling */
@@ -321,9 +310,31 @@ tr{
 	.fusion-mobile-menu-icons a {font-size: 24px; margin-top: 0px; margin-right: -10px;}
 	
 	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
 	/* Mobile Navigation - 0 Opacity Background - Negative Bottom Margin */
 	
-	.fusion-header {background-color: rgba(255, 255, 255, 0)!important; margin-bottom: -61px!important;}
+	.fusion-header {background-color: rgba(255, 255, 255, 0)!important; margin-bottom: -50px!important;}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/* GLOBAL */
+	
+	#main {margin-top: -13px!important}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/* Header Logo - Scaling */
+
+	.ccfs-header-logo {margin: 103px 0 40px 0; padding: 0 25% 0 25%;}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	
 	/* All Container Padding & Margins */
@@ -334,9 +345,13 @@ tr{
 		}
 	}	
 
-	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 70px 80px 50px 80px!important;}
+	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 70px 80px 50px 80px!important;
+		h2 {margin-bottom: 10px!important;}
+	}
 	
-	.ccfs-disco-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 40px 40px 0px 40px!important;}
+	.ccfs-disco-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: -80px!important; padding: 80px 80px 0px 80px!important;
+		.ccfs-disco-column{margin-bottom: 80px!important}
+	}
 	
 	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important; margin-bottom: 0px!important;
 		.ccfs-tour-column {
@@ -344,7 +359,7 @@ tr{
 		}
 	}
 	
-	.ccfs-booking-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 40px 40px 10px 40px!important; background-color: rgba(0,0,0,0.8)!important;
+	.ccfs-booking-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 40px 40px 15px 40px!important; background-color: rgba(0,0,0,0.8)!important;
 		.ccfs-booking-column {
 			.fusion-column-wrapper {padding: 0 0 0 0!important; background-color: rgba(0,0,0,0)!important;}
 		}
@@ -352,7 +367,6 @@ tr{
 	
 
 }
-
 
 
 
@@ -365,6 +379,14 @@ tr{
 @media only screen and (max-width: 800px) {
 	
 	
+	/* Header Logo - Scaling */
+
+	.ccfs-header-logo {margin: 70px 0 40px 0; padding: 0 20% 0 20%;}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
 	/* Page Titles - Top & Bottom Orange Border & Padding */
 
 	.ccfs-title {
@@ -375,13 +397,23 @@ tr{
 	p {font-size: 16px!important; line-height: 22px!important;}
 	
 	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
 	/* All Container Padding & Margins */
+	
+	.ccfs-disco-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: -60px!important; padding: 60px 60px 0px 60px!important;
+		.ccfs-disco-column{margin-bottom: 60px!important}
+	}
 	
 	.ccfs-home-tour-container{padding: 80px 80px 80px 80px!important;
 		.ccfs-home-tour-column {
 			.fusion-column-wrapper {padding: 0 0 0 0 !important;background-color: rgba(0,0,0,0)!important;}
 		}
-	}	
+	}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	
 	/* BANDS IN TOWN */
@@ -397,14 +429,18 @@ tr{
 	.bit-events td{height:auto!important;}
 	
 	
-	/* Header Logo - Scaling */
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/* Biography Page - Column CSS */
 
-	.ccfs-header-logo {margin: 70px 0 40px 0; padding: 0 20% 0 20%;}
+	.ccfs-columns {-webkit-column-count: 1; -moz-column-count: 1; column-count: 1; -webkit-column-gap: 0px; -moz-column-gap: 0px; column-gap: 0px;}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	
 }
-
-
 
 
 
@@ -417,14 +453,16 @@ tr{
 @media only screen and (max-width: 500px) {
 	
 	
+	/* Header Logo - Scaling */
+
+	.ccfs-header-logo {margin: 100px 0 60px 0; padding: 0 12% 0 12%;}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+	
 	/* All Container Padding & Margins */
-	
-	.ccfs-home-tour-container{padding: 40px 40px 0px 40px!important;
-		.ccfs-home-tour-column {
-			.fusion-column-wrapper {padding: 0 0 0 0 !important;background-color: rgba(0,0,0,0)!important;}
-		}
-	}	
-	
 	
 	.ccfs-home-about-container{
 		.ccfs-home-about-column {
@@ -432,27 +470,26 @@ tr{
 		}
 	}
 	
-	
-	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 30px 40px 10px 40px!important;}
-	
-	
-	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important;
-		.ccfs-tour-column {
-			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
-		}
+	.ccfs-bio-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 40px 40px 10px 40px!important;
+		h2 {margin-bottom: 10px!important;}
 	}
 	
+	
+	.ccfs-disco-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: -40px!important; padding: 40px 40px 0px 40px!important;
+		.ccfs-disco-column{margin-bottom: 50px!important}
+	}
+	
+	.ccfs-home-tour-container{padding: 40px 40px 22px 40px!important;
+		.ccfs-home-tour-column {
+			.fusion-column-wrapper {padding: 0 0 0 0 !important;background-color: rgba(0,0,0,0)!important;}
+		}
+	}	
 	
 	.ccfs-booking-container {
 		.ccfs-booking-column {
 			.fusion-column-wrapper {padding: 0 0 0 0!important;}
 		}
-	}
-	
-	
-	/* Header Logo - Scaling */
-
-	.ccfs-header-logo {margin: 125px 0 60px 0; padding: 0 12% 0 12%;}
-		 
+	}	
+	 
 			
 }
