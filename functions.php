@@ -10,8 +10,10 @@ function avada_lang_setup() {
 	load_child_theme_textdomain( 'Avada', $lang );
 }
 add_action( 'after_setup_theme', 'avada_lang_setup' );
+ 
     
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /* Load LESS */
 
@@ -29,20 +31,17 @@ function my_style_loader_tag_function($tag){
   return preg_replace("/='stylesheet' id='less-css'/", "='stylesheet/less' id='less-css'", $tag);
 }
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /* Remove Date from Yoast SEO */
 
 add_filter( 'wpseo_show_date_in_snippet_preview', false);
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-add_shortcode( 'divider', 'shortcode_insert_divider' );
-function shortcode_insert_divider( ) {
-return '<div class="divider"></div>';
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /* Remove Dates from SEO on Pages */
 
@@ -58,7 +57,9 @@ function wpd_remove_modified_date(){
 }
 add_action( 'template_redirect', 'wpd_remove_modified_date' );
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /* Remove Query String */
 
@@ -85,7 +86,9 @@ function _remove_script_version( $src ){
 add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /*** Add Field Visibility Section to Gravity Forms ***/		
 		
