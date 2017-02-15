@@ -107,9 +107,9 @@ iframe{border:none!important;}
 
 /* Header Logo - Scaling */
 
-.ccfs-slider-logo {img{filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));-webkit-filter:drop-shadow(0 0 10px rgba(0,0,0,0.7));}}
+/*.ccfs-slider-logo{filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));-webkit-filter:drop-shadow(0 0 10px rgba(0,0,0,0.7));}*/
 
-.ccfs-header-logo{max-width:900px;margin:140px 0 0 0;padding:0 10% 0 10%;overflow:visible;
+.ccfs-header-logo{max-width:900px;margin:140px 0 140px 0;padding:0 10% 0 10%;overflow:visible;
 	img{filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));-webkit-filter:drop-shadow(0 0 10px rgba(0,0,0,0.7));}
 }
 
@@ -120,7 +120,7 @@ iframe{border:none!important;}
 /* Page Titles - Top & Bottom Orange Border & Padding */
 
 .ccfs-title {text-transform: uppercase; padding: 0!important; margin-bottom: 40px!important; display: block;
-	h1 {border-top:3px solid @orange; border-bottom: 3px solid @orange; display: inline-block; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); color:@white!important;}
+	/*h1 {border-top:3px solid @orange; border-bottom: 3px solid @orange; display: inline-block; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); color:@white!important;}*/
 }
 
 
@@ -129,11 +129,7 @@ iframe{border:none!important;}
 
 /* All Container & Column Padding & Margins */
 
-.ccfs-tour-container{padding-bottom:80px!important;
-	.ccfs-home-tour-column{
-		.fusion-column-wrapper{padding:40px 80px 40px 80px!important;background-color:rgba(0,0,0,0.8)!important;}
-	}
-}
+.ccfs-tour-container{padding:40px 0 80px!important;}
 
 .ccfs-home-about-container{
 	.ccfs-home-about-column{
@@ -164,9 +160,9 @@ iframe{border:none!important;}
 
 /* Discography Page - Various Styling */
 
-.ccfs-disco-image {border:1px solid rgba(255,255,255,0.2); margin-bottom: 0px!important;}
+.ccfs-disco-image {border:1px solid #333; margin-bottom: 0px!important;}
 
-.ccfs-disco-button{font-size:16px;padding:16px 0;display:block;border-bottom:1px solid rgba(255,255,255,0.2)!important;margin:0!important;
+.ccfs-disco-button{font-size:16px;padding:16px 0;display:block;border-bottom:1px solid #333!important;margin:0!important;
 	&:hover{color:@orange;}
 	.button-icon-left{color:@white;}
 }
@@ -193,27 +189,20 @@ iframe{border:none!important;}
 		&:hover{color:@white;.transition()!important;}
 	}
 	
-	.bit-header{border-top:none;
-		th{font-family: karla;padding: 10px 10px 10px;letter-spacing:0px;font-weight:700!important;}
-		.bit-header-overflow-fix{overflow:visible;
-			.bit-header-links{display: none;}
-			.bit-share-links{margin-top:-2px
-				&:hover{color:@white;.transition()!important;}
-			}
-		}
-	}
+	.bit-header{border-top:none;display:none;}
 	
 	a.bit-events-nav{font-weight:700!important;}
 	
 	.bit-description-links, .bit-artist-event-link{display:none;pointer-events:none!important;font-size:16px!important;}
 	
-	table{border-bottom:none!important;}
+	table{border-bottom:none!important;margin-top:30px;}
 	
-	tr{border-top:1px solid rgba(255,255,255,0.1);}
+	tr{border-top:1px solid #333;}
 	
 	.bit-events td{border-top:none!important;}
 	
 	.bit-date, .bit-venue, .bit-location, .bit-tickets, .bit-rsvp{padding:10px 1%!important;font-size: 16px!important;}
+	
 	
 	.bit-date{width:10%!important;font-family:karla;font-weight:700!important;
 		a{font-weight:100!important;pointer-events:none!important;font-size: 16px!important;}
@@ -353,11 +342,7 @@ tr{
 		.ccfs-disco-column{margin-bottom: 80px!important}
 	}
 	
-	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important; margin-bottom: 0px!important;
-		.ccfs-tour-column {
-			.fusion-column-wrapper {padding: 40px 40px 40px 40px!important;}
-		}
-	}
+	.ccfs-tour-container {margin-left: -80px!important; margin-right: -80px!important; margin-bottom: 0px!important;}
 	
 	.ccfs-booking-container {margin-left: -40px!important; margin-right: -40px!important; margin-bottom: 0px!important; padding: 40px 40px 15px 40px!important; background-color: rgba(0,0,0,0.8)!important;
 		.ccfs-booking-column {
@@ -365,7 +350,6 @@ tr{
 		}
 	}
 	
-
 }
 
 
